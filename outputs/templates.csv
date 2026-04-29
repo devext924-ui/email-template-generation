@@ -1,0 +1,121 @@
+template_id,cluster_id,cluster_size,category,tone,sentiment,intent,subject_template,body_template,placeholders,representative_email_id,similarity_to_centroid,common_phrases
+tmpl_4186b4463a,2,89,thank_you,neutral,positive,request,Appreciate your help with the analytics dashboard,"Hi {recipient_name},
+
+I really appreciate your help with the analytics dashboard. Looking forward to working together again.
+
+Thanks,
+{sender_name}","['recipient_name', 'sender_name']",E00483,0.916196346282959,"['the analytics dashboard', 'analytics dashboard hi', 'with the analytics', 'analytics dashboard hello', 'on the analytics']"
+tmpl_6775b8ab58,1,84,announcement,neutral,positive,request,Checking in on the security audit,"Hi {recipient_name},
+
+Following up on my previous email about the security audit. Could you share an update by next {date}?
+
+Best,
+Cameron","['date', 'recipient_name', 'sender_name']",E00930,0.9041217565536499,"['the security audit', 'security audit hi', 'security audit hello', 'on the security', 'announcement the security']"
+tmpl_70c38d7ac7,5,82,confirmation,neutral,positive,request,Quick follow-up regarding the hiring pipeline,"Hi {recipient_name},
+
+Following up on my previous email about the hiring pipeline. Could you share an update by {deadline}?
+
+Best,
+Marco","['deadline', 'recipient_name', 'sender_name']",E00612,0.9287405610084534,"['the hiring pipeline', 'hiring pipeline hi', 'hiring pipeline hello', 'regarding the hiring', 'for the hiring']"
+tmpl_bbd3cb6c59,9,77,introduction,neutral,positive,request,Quick follow-up regarding the Q3 roadmap,"Hi {recipient_name},
+
+Following up on my previous email about the Q3 roadmap. Could you share an update by next {date}?
+
+Best,
+Riley","['date', 'recipient_name', 'sender_name']",E00219,0.9377807378768921,"['the q roadmap', 'q roadmap hi', 'q roadmap hello', 'on the q', 'about the q']"
+tmpl_d2ec5411ce,0,73,thank_you,neutral,positive,request,Appreciate your help with the customer onboarding flow,"Hi {recipient_name},
+
+I really appreciate your help with the customer onboarding flow. Looking forward to working together again.
+
+Thanks,
+{sender_name}","['recipient_name', 'sender_name']",E00579,0.914169192314148,"['the customer onboarding', 'customer onboarding flow', 'onboarding flow hi', 'let me know', 'me know if']"
+tmpl_e7dd1703ae,6,72,confirmation,neutral,positive,request,Update on the migration project,"Hi {recipient_name},
+
+Quick announcement — the migration project goes live on {date}. We'll share follow-up materials shortly.
+
+Thanks,
+{sender_name}","['date', 'recipient_name', 'sender_name']",E00307,0.9095996618270874,"['the migration project', 'migration project hi', 'for the migration', 'migration project hello', 'about the migration']"
+tmpl_271041dea3,11,59,confirmation,formal,positive,request,Your the product launch is confirmed,"Hi {recipient_name},
+
+This email confirms that the product launch is scheduled for next quarter. Please let me know if anything changes.
+
+Thanks,
+{sender_name}","['recipient_name', 'sender_name']",E00380,0.8694417476654053,"['the product launch', 'product launch hi', 'for the product', 'product launch hello', 'let me know']"
+tmpl_9b0b88f2bc,3,57,apology,formal,negative,apology,Apology for billing discrepancy,"Hi {recipient_name},
+
+I'm truly sorry for the inconvenience caused by billing discrepancy. We've identified the root cause and are working on a fix. I'll keep you updated.
+
+Best,
+Ananya","['recipient_name', 'sender_name']",E01084,0.9110170602798462,"[""i'm truly sorry"", 'truly sorry for', 'sorry for the', 'for the inconvenience', 'the inconvenience caused']"
+tmpl_b68ff98204,19,57,invoice,formal,neutral,request,Outstanding invoice {invoice_no},"Hi {recipient_name},
+
+Please find attached invoice {invoice_no} for the product launch. The amount due is payable by next {date}. Let me know if you have any questions.
+
+Regards,
+{sender_name}","['date', 'invoice_no', 'recipient_name', 'sender_name']",E00152,0.921934962272644,"['invoice inv for', 'inv for the', 'please find attached', 'find attached invoice', 'attached invoice inv']"
+tmpl_fb929d1fae,17,53,meeting_request,formal,neutral,general,Meeting request for the customer onboarding flow,"Hi {recipient_name},
+
+I'd love to set up a 30 minute call to align on the customer onboarding flow. Are you available {date} or later in the week?
+
+Thanks,
+{sender_name}","['date', 'recipient_name', 'sender_name']",E00771,0.898774266242981,"[""i'd love to"", 'love to set', 'to set up', 'set up a', 'up a minute']"
+tmpl_b950e1f053,18,52,introduction,neutral,positive,general,Introducing Marco,"Hi {recipient_name},
+
+My name is Marco and I'm reaching out about the customer onboarding flow. I'd love to learn more about your work and explore potential collaboration.
+
+Best,
+Marco","['recipient_name', 'sender_name']",E00434,0.8253363370895386,"[""i'm excited to"", 'excited to connect', 'to connect and', 'connect and discuss', 'and discuss the']"
+tmpl_edb543422d,4,51,confirmation,formal,positive,request,Announcement: the new pricing plan,"Hi {recipient_name},
+
+We are pleased to announce the new pricing plan. This will help us approve the change request. More details to follow soon.
+
+Best Regards,
+{sender_name}","['recipient_name', 'sender_name']",E00803,0.9270353317260742,"['the new pricing', 'new pricing plan', 'pricing plan hi', 'pricing plan dear', 'pricing plan hello']"
+tmpl_ced1e2f8ff,10,51,thank_you,formal,positive,request,Meeting request for the marketing campaign,"Hi {recipient_name},
+
+I hope you're doing well. Could we schedule a meeting next week to discuss the marketing campaign? I'm flexible on timing — please share a few slots that work for you.
+
+Best Regards,
+{sender_name}","['recipient_name', 'sender_name']",E00521,0.8553584814071655,"['the marketing campaign', 'marketing campaign hi', 'for the marketing', 'we schedule a', 'marketing campaign hello']"
+tmpl_09c54626ab,7,45,complaint,neutral,positive,complaint,Appreciate your help with the partnership agreement,"Hi {recipient_name},
+
+Thank you so much for the partnership agreement. Your support meant a lot and made a real difference.
+
+Warm Regards,
+{sender_name}","['recipient_name', 'sender_name']",E00667,0.8916230797767639,"['the partnership agreement', 'for the partnership', 'with the partnership', 'partnership agreement hello', 'partnership agreement dear']"
+tmpl_0a252c6d00,8,43,invoice,formal,neutral,request,Outstanding invoice {invoice_no},"Hi {recipient_name},
+
+This is a friendly reminder that invoice {invoice_no} is outstanding. Could you process payment by next {date}?
+
+Thanks,
+{sender_name}","['date', 'invoice_no', 'recipient_name', 'sender_name']",E00656,0.9592319130897522,"['this is a', 'is a friendly', 'a friendly reminder', 'friendly reminder that', 'reminder that invoice']"
+tmpl_3d2ac0fc8a,16,36,apology,formal,negative,apology,Apology for outage on our staging environment,"Hi {recipient_name},
+
+I'm truly sorry for the inconvenience caused by outage on our staging environment. We've identified the root cause and are working on a fix. I'll keep you updated.
+
+Best,
+Ananya","['recipient_name', 'sender_name']",E00065,0.9144044518470764,"['outage on our', 'on our staging', 'our staging environment', 'we need your', 'need your immediate']"
+tmpl_53635245dd,13,34,urgent_request,formal,positive,request,Your the partnership agreement is confirmed,"Hi {recipient_name},
+
+This email confirms that the partnership agreement is scheduled for next {date}. Please let me know if anything changes.
+
+Thanks,
+{sender_name}","['date', 'recipient_name', 'sender_name']",E00934,0.9019014835357666,"['the partnership agreement', 'partnership agreement hi', 'let me know', 'me know if', 'regarding the partnership']"
+tmpl_21d3311b0b,12,30,apology,formal,negative,apology,Apology for communication gap,"Hi {recipient_name},
+
+Please accept our sincere apologies for the communication gap. We are taking immediate steps to ensure this does not happen again. As a goodwill gesture, we'd like to offer expedite the shipment.
+
+Kind Regards,
+{sender_name}","['recipient_name', 'sender_name']",E00975,0.8433689475059509,"['please accept our', 'accept our sincere', 'our sincere apologies', 'sincere apologies for', 'apologies for the']"
+tmpl_3ad137fa0d,15,30,apology,formal,negative,apology,We're sorry about missing line items,"Hi {recipient_name},
+
+I'm truly sorry for the inconvenience caused by missing line items. We've identified the root cause and are working on a fix. I'll keep you updated.
+
+Best,
+Pat","['recipient_name', 'sender_name']",E00286,0.9289779663085938,"['missing line items', ""i'm truly sorry"", 'truly sorry for', 'sorry for the', 'for the inconvenience']"
+tmpl_a7a39d70ec,14,25,follow_up,neutral,neutral,follow_up,Quick follow-up regarding the product launch,"Hi {recipient_name},
+
+Just circling back on the product launch. Did you get a chance to review the materials I sent over? Happy to jump on a call if it's easier.
+
+Thanks,
+{sender_name}","['recipient_name', 'sender_name']",E00908,0.9240236282348633,"['just circling back', 'circling back on', 'back on the', 'did you get', 'you get a']"

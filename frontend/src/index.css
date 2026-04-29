@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #09090b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #09090b;
+  color: #f9fafb;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.28);
+  border: 3px solid #09090b;
+  border-radius: 999px;
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-[1.75rem] border border-white/[0.12] bg-white/[0.06] shadow-card backdrop-blur-2xl;
+  }
+
+  .premium-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-500 via-cyan-400 to-violet-500 px-5 py-3 text-sm font-semibold text-white shadow-glow transition duration-200 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-cyan-300/70;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-white/[0.12] bg-white/[0.06] px-5 py-3 text-sm font-semibold text-slate-100 transition duration-200 hover:border-white/25 hover:bg-white/[0.1] focus:outline-none focus:ring-2 focus:ring-cyan-300/60;
+  }
+
+  .input-shell {
+    @apply rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 outline-none transition focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-300/25;
+  }
+
+  .section-shell {
+    @apply scroll-mt-28;
+  }
+
+  .section-heading {
+    @apply mb-6 max-w-3xl;
+  }
+
+  .section-heading h2 {
+    @apply text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl;
+  }
+
+  .section-heading p:not(.section-kicker) {
+    @apply mt-3 text-base leading-7 text-slate-400;
+  }
+
+  .section-kicker {
+    @apply mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200;
+  }
+}

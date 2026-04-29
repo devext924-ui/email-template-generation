@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/*.tsbuildinfo
+
+# Model and cache artifacts
+data/processed/embeddings.npy
+data/processed/embeddings.meta
+models/fine_tuned_sentence_transformer/*
+!models/fine_tuned_sentence_transformer/.gitkeep
+
+# Local uploads can contain private email data
+data/raw/*
+!data/raw/.gitkeep

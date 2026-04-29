@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "email-template-generation"
+version = "0.1.0"
+description = "NLP-powered email standardization app with FastAPI, React, Sentence Transformers, and Scikit-learn."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Email Template Generation Team" }]
+license = { text = "MIT" }
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+    "streamlit>=1.35.0",
+    "setuptools>=68,<82",
+    "pandas>=2.1.0",
+    "numpy>=1.26.0",
+    "scikit-learn>=1.4.0",
+    "sentence-transformers>=5.1.0,<6.0.0",
+    "transformers>=4.57.0,<5.0.0",
+    "tokenizers>=0.22.0,<0.23.0",
+    "huggingface-hub>=0.36.0,<1.0.0",
+    "torch>=2.7.0,<3.0.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "python-multipart>=0.0.9",
+    "python-dotenv>=1.0.0",
+    "joblib>=1.3.0",
+    "tqdm>=4.66.0",
+    "nltk>=3.8.1",
+    "textstat>=0.7.3",
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "httpx>=0.27.0",
+    "ruff>=0.3.0",
+    "mypy>=1.8.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["backend*", "frontend*"]
+
+[tool.setuptools]
+py-modules = ["app", "cli"]
+
+[project.scripts]
+email-template-cli = "cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N"]
+ignore = ["E501"]
