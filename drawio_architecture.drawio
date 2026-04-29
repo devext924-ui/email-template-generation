@@ -1,0 +1,270 @@
+<mxfile host="app.diagrams.net" modified="2026-04-29T00:00:00.000Z" agent="Claude" version="21.0.0" type="device">
+  <diagram name="draw.io Architecture" id="drawio-arch-dark">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1700" pageHeight="900" math="0" shadow="1" background="#0d1117">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!--  TITLE                                         -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <mxCell id="title_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#161b22;strokeColor=#30363d;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="12" width="900" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="draw.io  ·  System Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=24;fontStyle=1;fontColor=#e2e8f0;letterSpacing=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="12" width="900" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!--  ROW 1 — USER INTERFACE LAYER                  -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <mxCell id="ui_layer" value="🖥️   User Interface Layer" style="swimlane;fillColor=#0a1628;strokeColor=#3b82f6;fontColor=#60a5fa;fontSize=13;fontStyle=1;startSize=32;rounded=1;arcSize=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="1650" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_menu" value="Menu Bar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#93c5fd;fontSize=11;fontStyle=1;" vertex="1" parent="ui_layer">
+          <mxGeometry x="20" y="45" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_toolbar" value="Toolbar &amp; Panels" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#93c5fd;fontSize=11;fontStyle=1;" vertex="1" parent="ui_layer">
+          <mxGeometry x="207" y="45" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_shapes" value="Shape Panel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#93c5fd;fontSize=11;fontStyle=1;" vertex="1" parent="ui_layer">
+          <mxGeometry x="394" y="45" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_canvas" value="Canvas  (Editing Area)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#173560;strokeColor=#60a5fa;fontColor=#bfdbfe;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="ui_layer">
+          <mxGeometry x="581" y="45" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_format" value="Format Panel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#93c5fd;fontSize=11;fontStyle=1;" vertex="1" parent="ui_layer">
+          <mxGeometry x="848" y="45" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_minimap" value="Minimap" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#93c5fd;fontSize=11;fontStyle=1;" vertex="1" parent="ui_layer">
+          <mxGeometry x="1035" y="45" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_search" value="Shape Search" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#93c5fd;fontSize=11;fontStyle=1;" vertex="1" parent="ui_layer">
+          <mxGeometry x="1222" y="45" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_shortcuts" value="Keyboard Shortcuts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#93c5fd;fontSize=11;fontStyle=1;" vertex="1" parent="ui_layer">
+          <mxGeometry x="1432" y="45" width="198" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!--  ROW 2 — CORE ENGINE + DATA MODEL               -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <mxCell id="core_engine" value="⚙️   Core Engine  (mxGraph)" style="swimlane;fillColor=#140d26;strokeColor=#a855f7;fontColor=#c084fc;fontSize=13;fontStyle=1;startSize=32;rounded=1;arcSize=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="275" width="960" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ce_gmodel" value="Graph Model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2d1b4e;strokeColor=#a855f7;fontColor=#d8b4fe;fontSize=11;fontStyle=1;" vertex="1" parent="core_engine">
+          <mxGeometry x="20" y="45" width="163" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ce_gview" value="Graph View" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2d1b4e;strokeColor=#a855f7;fontColor=#d8b4fe;fontSize=11;fontStyle=1;" vertex="1" parent="core_engine">
+          <mxGeometry x="200" y="45" width="163" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ce_cell" value="Cell Handler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2d1b4e;strokeColor=#a855f7;fontColor=#d8b4fe;fontSize=11;fontStyle=1;" vertex="1" parent="core_engine">
+          <mxGeometry x="380" y="45" width="163" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ce_events" value="Event Bus" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b1f5e;strokeColor=#c084fc;fontColor=#e9d5ff;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="core_engine">
+          <mxGeometry x="560" y="45" width="163" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ce_undo" value="Undo / Redo Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2d1b4e;strokeColor=#a855f7;fontColor=#d8b4fe;fontSize=11;fontStyle=1;" vertex="1" parent="core_engine">
+          <mxGeometry x="754" y="45" width="186" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="data_model" value="📦   Data Model" style="swimlane;fillColor=#071f07;strokeColor=#22c55e;fontColor=#4ade80;fontSize=13;fontStyle=1;startSize=32;rounded=1;arcSize=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="275" width="640" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="dm_xml" value="XML Schema" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#14532d;strokeColor=#22c55e;fontColor=#86efac;fontSize=11;fontStyle=1;" vertex="1" parent="data_model">
+          <mxGeometry x="20" y="45" width="135" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dm_style" value="Style Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#14532d;strokeColor=#22c55e;fontColor=#86efac;fontSize=11;fontStyle=1;" vertex="1" parent="data_model">
+          <mxGeometry x="170" y="45" width="135" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dm_shapes" value="Shape Libraries" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#14532d;strokeColor=#22c55e;fontColor=#86efac;fontSize=11;fontStyle=1;" vertex="1" parent="data_model">
+          <mxGeometry x="320" y="45" width="135" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dm_layout" value="Layout Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#166534;strokeColor=#4ade80;fontColor=#bbf7d0;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="data_model">
+          <mxGeometry x="470" y="45" width="150" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!--  ROW 3 — RENDERING / COLLABORATION / EXPORT     -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <mxCell id="rendering" value="🎨   Rendering Engine" style="swimlane;fillColor=#1c0f00;strokeColor=#f59e0b;fontColor=#fbbf24;fontSize=13;fontStyle=1;startSize=32;rounded=1;arcSize=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="470" width="580" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="r_svg" value="SVG Renderer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#451a03;strokeColor=#f59e0b;fontColor=#fde68a;fontSize=11;fontStyle=1;" vertex="1" parent="rendering">
+          <mxGeometry x="20" y="45" width="165" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="r_canvas" value="Canvas Renderer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#451a03;strokeColor=#f59e0b;fontColor=#fde68a;fontSize=11;fontStyle=1;" vertex="1" parent="rendering">
+          <mxGeometry x="200" y="45" width="165" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="r_html" value="HTML Renderer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5a2400;strokeColor=#fbbf24;fontColor=#fef3c7;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="rendering">
+          <mxGeometry x="385" y="45" width="175" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="collab" value="🤝   Collaboration" style="swimlane;fillColor=#051520;strokeColor=#06b6d4;fontColor=#22d3ee;fontSize=13;fontStyle=1;startSize=32;rounded=1;arcSize=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="470" width="580" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="c_sync" value="Real-time Sync" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2340;strokeColor=#06b6d4;fontColor=#67e8f9;fontSize=11;fontStyle=1;" vertex="1" parent="collab">
+          <mxGeometry x="20" y="45" width="165" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c_comments" value="Comments &amp; Reviews" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2340;strokeColor=#06b6d4;fontColor=#67e8f9;fontSize=11;fontStyle=1;" vertex="1" parent="collab">
+          <mxGeometry x="200" y="45" width="165" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c_version" value="Version History" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f2e42;strokeColor=#22d3ee;fontColor=#a5f3fc;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="collab">
+          <mxGeometry x="385" y="45" width="175" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="export_eng" value="📤   Export Engine" style="swimlane;fillColor=#0b1a04;strokeColor=#84cc16;fontColor=#a3e635;fontSize=13;fontStyle=1;startSize=32;rounded=1;arcSize=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="470" width="390" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ex_svg" value="SVG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2e0a;strokeColor=#84cc16;fontColor=#bef264;fontSize=11;fontStyle=1;" vertex="1" parent="export_eng">
+          <mxGeometry x="14" y="45" width="62" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ex_png" value="PNG / JPEG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2e0a;strokeColor=#84cc16;fontColor=#bef264;fontSize=10;fontStyle=1;" vertex="1" parent="export_eng">
+          <mxGeometry x="88" y="45" width="72" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ex_pdf" value="PDF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2e0a;strokeColor=#84cc16;fontColor=#bef264;fontSize=11;fontStyle=1;" vertex="1" parent="export_eng">
+          <mxGeometry x="172" y="45" width="62" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ex_xml" value=".drawio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#253d0a;strokeColor=#a3e635;fontColor=#d9f99d;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="export_eng">
+          <mxGeometry x="246" y="45" width="68" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ex_html" value="HTML Embed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2e0a;strokeColor=#84cc16;fontColor=#bef264;fontSize=10;fontStyle=1;" vertex="1" parent="export_eng">
+          <mxGeometry x="326" y="45" width="52" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!--  ROW 4 — STORAGE + PLUGIN SYSTEM               -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <mxCell id="storage" value="☁️   Storage &amp; Integrations" style="swimlane;fillColor=#1a0505;strokeColor=#ef4444;fontColor=#f87171;fontSize=13;fontStyle=1;startSize=32;rounded=1;arcSize=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="665" width="930" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s_local" value="Local File System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#450a0a;strokeColor=#ef4444;fontColor=#fca5a5;fontSize=11;fontStyle=1;" vertex="1" parent="storage">
+          <mxGeometry x="18" y="45" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s_gdrive" value="Google Drive" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#450a0a;strokeColor=#ef4444;fontColor=#fca5a5;fontSize=11;fontStyle=1;" vertex="1" parent="storage">
+          <mxGeometry x="194" y="45" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s_github" value="GitHub / GitLab" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5a0a0a;strokeColor=#f87171;fontColor=#fecaca;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="storage">
+          <mxGeometry x="370" y="45" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s_conf" value="Confluence / Jira" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#450a0a;strokeColor=#ef4444;fontColor=#fca5a5;fontSize=11;fontStyle=1;" vertex="1" parent="storage">
+          <mxGeometry x="546" y="45" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s_onedrive" value="OneDrive / SharePoint" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#450a0a;strokeColor=#ef4444;fontColor=#fca5a5;fontSize=11;fontStyle=1;" vertex="1" parent="storage">
+          <mxGeometry x="730" y="45" width="182" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="plugins" value="🔌   Plugin &amp; Extension System" style="swimlane;fillColor=#141100;strokeColor=#eab308;fontColor=#facc15;fontSize=13;fontStyle=1;startSize=32;rounded=1;arcSize=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="665" width="670" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p_shapes" value="Custom Shapes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e2a00;strokeColor=#eab308;fontColor=#fef08a;fontSize=11;fontStyle=1;" vertex="1" parent="plugins">
+          <mxGeometry x="18" y="45" width="138" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p_stencils" value="Stencil Libraries" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e2a00;strokeColor=#eab308;fontColor=#fef08a;fontSize=11;fontStyle=1;" vertex="1" parent="plugins">
+          <mxGeometry x="172" y="45" width="138" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p_plugins" value="Custom Plugins" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3d3500;strokeColor=#facc15;fontColor=#fef9c3;fontSize=11;fontStyle=1;strokeWidth=2;" vertex="1" parent="plugins">
+          <mxGeometry x="326" y="45" width="138" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p_api" value="REST API / Embed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e2a00;strokeColor=#eab308;fontColor=#fef08a;fontSize=11;fontStyle=1;" vertex="1" parent="plugins">
+          <mxGeometry x="492" y="45" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!--  EDGES                                          -->
+        <!-- ═══════════════════════════════════════════════ -->
+
+        <!-- UI Layer ↔ Core Engine (bidirectional, violet) -->
+        <mxCell id="e_ui_core" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#7c3aed;strokeWidth=2.5;endArrow=block;endFill=1;startArrow=block;startFill=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" source="ui_layer" target="core_engine" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- UI Layer → Data Model (cyan) -->
+        <mxCell id="e_ui_data" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#0ea5e9;strokeWidth=2;endArrow=open;endFill=0;exitX=0.82;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="ui_layer" target="data_model" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Core Engine ↔ Data Model (purple, horizontal) -->
+        <mxCell id="e_core_data" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#8b5cf6;strokeWidth=3;endArrow=block;endFill=1;startArrow=block;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="core_engine" target="data_model" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Core Engine → Rendering (amber) -->
+        <mxCell id="e_core_render" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#f59e0b;strokeWidth=2.5;endArrow=block;endFill=1;exitX=0.14;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="core_engine" target="rendering" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Core Engine → Collaboration (cyan) -->
+        <mxCell id="e_core_collab" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#06b6d4;strokeWidth=2.5;endArrow=block;endFill=1;exitX=0.65;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" edge="1" source="core_engine" target="collab" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Data Model → Export Engine (lime) -->
+        <mxCell id="e_data_export" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#84cc16;strokeWidth=2;endArrow=block;endFill=1;exitX=0.85;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" edge="1" source="data_model" target="export_eng" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Core Engine ↔ Storage (red, routed left side) -->
+        <mxCell id="e_core_storage" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#ef4444;strokeWidth=2.5;endArrow=block;endFill=1;startArrow=block;startFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" source="core_engine" target="storage" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="345" />
+              <mxPoint x="30" y="665" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Data Model → Plugin System (yellow) -->
+        <mxCell id="e_data_plugins" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#eab308;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="data_model" target="plugins" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Rendering → UI Canvas (dashed feedback, amber) -->
+        <mxCell id="e_render_ui" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#f59e0b;strokeWidth=1.5;endArrow=open;endFill=0;dashed=1;dashPattern=8 4;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.22;entryY=1;entryDx=0;entryDy=0;" edge="1" source="rendering" target="ui_layer" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Collaboration → Storage (dashed, for persistence) -->
+        <mxCell id="e_collab_storage" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#06b6d4;strokeWidth=1.5;endArrow=open;endFill=0;dashed=1;dashPattern=8 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.6;entryY=0;entryDx=0;entryDy=0;" edge="1" source="collab" target="storage" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Plugins → Core Engine (extensions hook in) -->
+        <mxCell id="e_plugins_core" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#eab308;strokeWidth=1.5;endArrow=open;endFill=0;dashed=1;dashPattern=6 3;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" source="plugins" target="core_engine" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1010" y="735" />
+              <mxPoint x="1010" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!--  LEGEND                                         -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <mxCell id="legend_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#161b22;strokeColor=#30363d;arcSize=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="840" width="1650" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_label" value="Legend:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#94a3b8;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="840" width="70" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" value="Bidirectional data flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#c084fc;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="145" y="840" width="165" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" value="One-way data flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#60a5fa;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="320" y="840" width="145" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" value="Feedback / async" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#f59e0b;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="475" y="840" width="130" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4" value="Extension hooks (dashed)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#eab308;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="615" y="840" width="185" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_copy" value="© draw.io (diagrams.net)  ·  Architecture overview by Claude" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontColor=#475569;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="900" y="840" width="785" height="38" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
