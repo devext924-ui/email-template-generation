@@ -44,6 +44,8 @@ flowchart LR
     API --> MATCH[Raw Email to Best Template]
 ```
 
+![Email Template Flow Diagram](docs/diagram.png)
+
 ## Project Structure
 
 ```text
