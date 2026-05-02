@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import {
+  AlertCircle,
   Brain,
   CheckCircle2,
-  GaugeCircle,
   Rocket,
   SlidersHorizontal,
   Sparkles,
+  X,
 } from "lucide-react";
 import { apiClient, ApiClientError } from "./api/client";
 import { ActionCard } from "./components/ActionCard";
 import { DownloadPanel } from "./components/DownloadPanel";
 import { EmailInputPanel } from "./components/EmailInputPanel";
 import { EvaluationPanel } from "./components/EvaluationPanel";
+import { Footer } from "./components/Footer";
 import { HeroSection } from "./components/HeroSection";
 import { Navbar } from "./components/Navbar";
 import { TemplateBrowser } from "./components/TemplateBrowser";
@@ -236,9 +238,15 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#09090B] text-slate-100">
-      <div className="pointer-events-none fixed inset-0 bg-hero-grid bg-[length:48px_48px] opacity-[0.08]" />
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.18),transparent_34rem),radial-gradient(circle_at_20%_30%,rgba(139,92,246,0.16),transparent_30rem),linear-gradient(180deg,#09090B_0%,#0B0F19_48%,#09090B_100%)]" />
+    <div className="relative min-h-screen overflow-hidden bg-[#05070A] text-slate-100">
+      <div
+        className="pointer-events-none fixed inset-0 bg-hero-grid bg-[length:48px_48px] opacity-[0.06]"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none fixed inset-0 bg-premium-radial"
+        aria-hidden="true"
+      />
 
       <div className="relative z-10">
         <Navbar health={health} healthError={healthError} apiBaseUrl={apiClient.baseUrl} />
@@ -247,8 +255,12 @@ function App() {
           emailCount={evaluation?.n_emails || health?.n_emails_loaded || 0}
         />
 
-        <main className="mx-auto max-w-7xl space-y-16 px-4 pb-20 sm:px-6 lg:px-8">
-          {notice ? <NoticeBanner notice={notice} /> : null}
+        <main className="mx-auto max-w-7xl space-y-20 px-4 pb-20 sm:px-6 lg:px-8">
+          <AnimatePresence>
+            {notice ? (
+              <NoticeBanner key="notice" notice={notice} onDismiss={() => setNotice(null)} />
+            ) : null}
+          </AnimatePresence>
 
           <motion.section
             id="actions"
@@ -264,7 +276,7 @@ function App() {
               <p>Upload data, run the NLP pipeline, fine-tune embeddings, and test matching.</p>
             </div>
 
-            <div className="grid grid-cols-1 gap-5 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
               <UploadPanel
                 selectedFile={selectedFile}
                 uploadResult={uploadResult}
@@ -285,19 +297,22 @@ function App() {
                 onAction={handleRunPipeline}
                 tone="blue"
               >
-                <select
-                  value={clusteringMethod}
-                  onChange={(event) =>
-                    setClusteringMethod(event.target.value as (typeof CLUSTERING_METHODS)[number])
-                  }
-                  className="input-shell w-full"
-                >
-                  {CLUSTERING_METHODS.map((method) => (
-                    <option key={method} value={method}>
-                      {method}
-                    </option>
-                  ))}
-                </select>
+                <label className="block text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
+                  Clustering method
+                  <select
+                    value={clusteringMethod}
+                    onChange={(event) =>
+                      setClusteringMethod(event.target.value as (typeof CLUSTERING_METHODS)[number])
+                    }
+                    className="input-shell mt-1.5 w-full font-sans text-sm normal-case tracking-normal text-slate-100"
+                  >
+                    {CLUSTERING_METHODS.map((method) => (
+                      <option key={method} value={method}>
+                        {method}
+                      </option>
+                    ))}
+                  </select>
+                </label>
                 <label className="flex items-center justify-between gap-3 text-sm text-slate-300">
                   Auto clusters
                   <input
@@ -308,15 +323,17 @@ function App() {
                   />
                 </label>
                 {!autoClusters ? (
-                  <input
-                    type="number"
-                    min={2}
-                    max={100}
-                    value={nClusters}
-                    onChange={(event) => setNClusters(Number(event.target.value))}
-                    className="input-shell w-full"
-                    aria-label="Number of clusters"
-                  />
+                  <label className="block text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
+                    Number of clusters
+                    <input
+                      type="number"
+                      min={2}
+                      max={100}
+                      value={nClusters}
+                      onChange={(event) => setNClusters(Number(event.target.value))}
+                      className="input-shell mt-1.5 w-full font-sans text-sm normal-case tracking-normal text-slate-100"
+                    />
+                  </label>
                 ) : null}
                 <label className="flex items-center justify-between gap-3 text-sm text-slate-300">
                   Use fine-tuned model
@@ -341,7 +358,7 @@ function App() {
                 tone="violet"
               >
                 <div className="grid grid-cols-2 gap-3">
-                  <label className="text-xs font-medium text-slate-400">
+                  <label className="block text-[11px] font-medium uppercase tracking-[0.18em] text-slate-500">
                     Epochs
                     <input
                       type="number"
@@ -349,10 +366,10 @@ function App() {
                       max={10}
                       value={epochs}
                       onChange={(event) => setEpochs(Number(event.target.value))}
-                      className="input-shell mt-1 w-full"
+                      className="input-shell mt-1.5 w-full font-sans text-sm normal-case tracking-normal text-slate-100"
                     />
                   </label>
-                  <label className="text-xs font-medium text-slate-400">
+                  <label className="block text-[11px] font-medium uppercase tracking-[0.18em] text-slate-500">
                     Batch
                     <input
                       type="number"
@@ -360,7 +377,7 @@ function App() {
                       max={128}
                       value={batchSize}
                       onChange={(event) => setBatchSize(Number(event.target.value))}
-                      className="input-shell mt-1 w-full"
+                      className="input-shell mt-1.5 w-full font-sans text-sm normal-case tracking-normal text-slate-100"
                     />
                   </label>
                 </div>
@@ -374,9 +391,9 @@ function App() {
                   />
                 </label>
                 {fineTuneResult ? (
-                  <p className="rounded-2xl border border-emerald-300/20 bg-emerald-300/10 p-3 text-xs leading-5 text-emerald-100">
-                    Model ready: {fineTuneResult.n_pairs.toLocaleString()} pairs,{" "}
-                    {fineTuneResult.duration_seconds.toFixed(1)}s.
+                  <p className="rounded-2xl border border-emerald-300/20 bg-emerald-300/[0.08] p-3 text-xs leading-5 text-emerald-100">
+                    Model ready &middot; {fineTuneResult.n_pairs.toLocaleString()} pairs &middot;{" "}
+                    {fineTuneResult.duration_seconds.toFixed(1)}s
                   </p>
                 ) : null}
               </ActionCard>
@@ -388,7 +405,9 @@ function App() {
                 description="Jump to raw email matching and retrieve the closest template from backend state."
                 buttonLabel="Open generator"
                 disabled={!backendOnline}
-                onAction={() => document.getElementById("generate")?.scrollIntoView({ behavior: "smooth" })}
+                onAction={() =>
+                  document.getElementById("generate")?.scrollIntoView({ behavior: "smooth" })
+                }
                 tone="cyan"
               />
             </div>
@@ -408,34 +427,45 @@ function App() {
             onDownload={handleDownload}
           />
         </main>
+
+        <Footer apiBaseUrl={apiClient.baseUrl} />
       </div>
     </div>
   );
 }
 
-function NoticeBanner({ notice }: { notice: Notice }) {
-  const styles = {
-    success: "border-emerald-300/20 bg-emerald-300/10 text-emerald-100",
-    error: "border-rose-300/20 bg-rose-300/10 text-rose-100",
-    info: "border-cyan-300/20 bg-cyan-300/10 text-cyan-100",
+function NoticeBanner({ notice, onDismiss }: { notice: Notice; onDismiss: () => void }) {
+  const styles: Record<Notice["type"], string> = {
+    success: "border-emerald-300/20 bg-emerald-300/[0.08] text-emerald-100",
+    error: "border-rose-300/20 bg-rose-300/[0.08] text-rose-100",
+    info: "border-cyan-300/20 bg-cyan-300/[0.08] text-cyan-100",
+  };
+
+  const icons: Record<Notice["type"], React.ReactNode> = {
+    success: <CheckCircle2 className="h-5 w-5 shrink-0" aria-hidden="true" />,
+    error: <AlertCircle className="h-5 w-5 shrink-0" aria-hidden="true" />,
+    info: <Sparkles className="h-5 w-5 shrink-0" aria-hidden="true" />,
   };
 
   return (
     <motion.div
-      className={`flex items-center gap-3 rounded-3xl border px-5 py-4 text-sm shadow-card ${styles[notice.type]}`}
-      initial={{ opacity: 0, y: -12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35 }}
+      className={`flex items-center gap-3 rounded-3xl border px-5 py-4 text-sm shadow-card backdrop-blur ${styles[notice.type]}`}
+      initial={{ opacity: 0, y: -16, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: -12, scale: 0.98 }}
+      transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
       role={notice.type === "error" ? "alert" : "status"}
     >
-      {notice.type === "success" ? (
-        <CheckCircle2 className="h-5 w-5 shrink-0" aria-hidden="true" />
-      ) : notice.type === "error" ? (
-        <GaugeCircle className="h-5 w-5 shrink-0" aria-hidden="true" />
-      ) : (
-        <Sparkles className="h-5 w-5 shrink-0" aria-hidden="true" />
-      )}
-      <span>{notice.message}</span>
+      {icons[notice.type]}
+      <span className="flex-1">{notice.message}</span>
+      <button
+        type="button"
+        onClick={onDismiss}
+        className="rounded-full p-1.5 text-current/80 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+        aria-label="Dismiss notification"
+      >
+        <X className="h-4 w-4" aria-hidden="true" />
+      </button>
     </motion.div>
   );
 }
